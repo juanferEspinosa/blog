@@ -1,0 +1,141 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block title %}Resume{% endblock %}
+{% block meta%}
+    <meta name="description" content="Description to be defined for the website."/>
+    <meta name="keywords" content="Description to be defined for the website."/>
+    <meta property="og:locale" content="en_DE"/>
+    <meta property="og:site_name" content="Juanfer Espinosa"/>
+    <meta property="og:title" content="Resume | Juanfer Espinosa"/>
+    <meta property="og:description" content="Description to be defined for the website2."/>
+    <meta property="og:type" content="website"/>
+{% endblock %}
+{% block content %}
+
+<main class="main-aboutpage">
+
+    {% include 'header.html' %}
+
+    <!-- Credentials -->
+    <section class="credential-area">
+        <div class="container">
+            <div class="gx-row d-flex">
+                <div class="credential-sidebar-wrap" data-aos="zoom-in">
+                    <div class="credential-sidebar text-center">
+                        <div class="shadow-box">
+                            <img src="{% static '/images/bg1.png' %}" alt="BG" class="bg-img">
+                            <div class="img-box">
+                                <img src="{% static 'images/juanfer_espinosa2.png' %}" alt="About Me">
+                            </div>
+                            <h2>Juanfer Espinosa</h2>
+                            <!--<p>@davidhenderson</p>-->
+    
+                            <ul class="social-links d-flex justify-content-center">
+                                <!--<li><a href="#"><i class="iconoir-dribbble"></i></a></li>-->
+                                <!--<li><a href="#"><i class="iconoir-twitter"></i></a></li>-->
+                                <li><a href="https://www.instagram.com/juanfernandoer/" target="_blank"><i class="iconoir-instagram"></i></a></li>
+                                <li><a href="https://www.linkedin.com/in/juanferespinosa" target="_blank"><i class="iconoir-linkedin"></i></a></li>
+                                <li><a href="https://github.com/juanferEspinosa" target="_blank"><i class="iconoir-github"></i></a></li>
+                                <li><a href="mailto:espinosajfer@gmail.com"><i class="iconoir-mail"></i></a></li>
+                            </ul>
+    
+                            <a href="{% static 'Resume - Juan Espinosa.pdf' %}" download="juanfer_espinosa_resume" class="theme-btn">Download resume</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="credential-content flex-1">
+                    <div class="credential-edc-exp credential-experience">
+                        <h2 data-aos="fade-up">Experience</h2>
+                        <div class="credential-edc-exp-item" data-aos="zoom-in">
+                            <h4>2022 - Present</h4>
+                            <h3>Data Analyst</h3>
+                            <h5>Checkmk</h5>
+                            <p>Responsible for organizing, structuring, and analyzing data in key regions to measure critical metrics such as ROI, LTV:CAC ratio, ACV analysis, and evaluate the effectiveness of marketing efforts. Created Python workflows to overcome analysis limitations in internal CMS. Accountable for tracking strategy in the website with GA4 and GTM.</p>
+                        </div>
+                        <div class="credential-edc-exp-item" data-aos="zoom-in">
+                            <h4>2021</h4>
+                            <h3>Product Information Management Intern</h3>
+                            <h5>ZF WABCO</h5>
+                            <p>Preprocessed and analyzed market data with SQL and MS. Excel. The goal was to get insights for opportunities and weaknesses especially for after-market numbers and execute actions. In there, I also optimized the ZF WABCO international webshop focused on aftermarket sales.</p>
+                        </div>
+                        <div class="credential-edc-exp-item" data-aos="zoom-in">
+                            <h4>2017 - 2019</h4>
+                            <h3>SEO/SEM and Strategy analyst</h3>
+                            <h5>Econsulting 360</h5>
+                            <p>Econsulting 360 was a digital marketing agency, with a primary focus on E-commerce. My overall goal was to oversee the performance of each client in terms of return of investment. Therefore, I was responsible for overseeing the budget spent in key channels, implementation of data collection and data positioning processes to measure each client's KPIs. Finally, I was accountable to clients for which I presented monthly performance reports.</p>
+                        </div>
+                        <div class="credential-edc-exp-item" data-aos="zoom-in">
+                            <h4>2015 - 2017</h4>
+                            <h3>Digital Marketing Analyst</h3>
+                            <h5>Céntrico Digital</h5>
+                            <p>Céntrico Digital was one of the leading agencies in Ecuador. Its strength ranged from an excel website design and deployment, outstunding marketing strategies, and clear paths to goals. Céntrico Digital was my first ever job in marketing where I became aware the scope of digital marketing and I found my passion for analytics and programming. In there, I settled marketing automation platforms, HubSpot and Sharpspring, and lead generation strategies. I programmed my first landing pages for lead generation purposes, as well as leading SEO audits to improve clients' position in search engines.</p>
+                        </div>
+                    </div>
+
+                    <div class="credential-edc-exp credential-education">
+                        <h2 data-aos="fade-up">Education</h2>
+                        <div class="credential-edc-exp-item" data-aos="zoom-in">
+                            <h4>2019 - 20227</h4>
+                            <h3>M.Sc. Data Analytics</h3>
+                            <h5>University of Hildesheim</h5>
+                            <p>Master focused on Machine Learning with emphasis on research and model implementation with Python. I wrote a thesis aiming to improve the state-of-the-art results for Graph Convolutional Neural Networks (GCNs) in node classification. I Developed a year-project on improving the state-of-the-art results based on image classification and active learning tasks. During the program I programmed algorithms in graph analytics, deep learning, image classification, time-series, regression and classification tasks, to name a few areas.</p>
+                        </div>
+                        <div class="credential-edc-exp-item" data-aos="zoom-in">
+                            <h4>2010 - 2016</h4>
+                            <h3>Marketing</h3>
+                            <h5>De las Américas University</h5>
+                            <p>Bachelor in marketing with special focus on management, economics, accounting, and finance.</p>
+                        </div>
+                    </div>
+
+                    <div class="skills-wrap">
+                        <h2 data-aos="fade-up">Skills</h2>
+                        <div class="d-grid skill-items gap-24 flex-wrap">
+                            <div class="skill-item" data-aos="zoom-in">
+                                <!--<span class="percent">85%</span>-->
+                                <h3 class="name">Prgramming</h3>
+                                <p>Python, Pytorch, Django, Numpy, Pandas, Sklearn, SQL, MS Access, Skorch, HTML, CSS, Matplotlib, Git, Github</p>
+                            </div>
+                            <div class="skill-item" data-aos="zoom-in">
+                                <!--<span class="percent">%</span>-->
+                                <h3 class="name">Marketing</h3>
+                                <p>Hubspot, SharpSpring, Google Analytics 4 (GA4), Google Tag Manager, Facebook Analytics, Google Search Console, dashbaords</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="skills-wrap awards-wrap">
+                        <h2 data-aos="fade-up">Languages</h2>
+                        <div class="d-grid skill-items gap-24 flex-wrap">
+                            <div class="skill-item" data-aos="zoom-in">
+                                <!--<span class="percent">14 May 2020</span>-->
+                                <h3 class="name">English</h3>
+                                <p>Proffesional proficiency</p>
+                            </div>
+                            <div class="skill-item" data-aos="zoom-in">
+                                <h3 class="name">German</h3>
+                                <p>B1 Level - Work in progress</p>
+                            </div>
+                            <div class="skill-item" data-aos="zoom-in">
+                                <h3 class="name">Spanish</h3>
+                                <p>Native</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+
+    <!-- Footer -->
+    {% include 'footer.html' %}
+
+</main>
+
+{% endblock content %}
+

@@ -1,0 +1,20 @@
+{% load static %}
+<footer class="footer-area">
+    <div class="container">
+        <div class="footer-content text-center">
+            <a href="{% url 'homepage' %}" class="logo">
+                <img src="{% static 'images/Logo-escaled.png' %}" alt="Logo">
+            </a>
+            <ul class="footer-menu">
+                <li><a href="{% url 'homepage' %}">Home</a></li>
+                <li><a href="{% url 'resume' %}">Resume</a></li>
+
+
+
+            </ul>
+            <p class="copyright">
+                &copy; All rights reserved by <span>Juanfer Espinosa</span>
+            </p>
+        </div>
+    </div>
+</footer>

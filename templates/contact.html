@@ -1,0 +1,87 @@
+{% extends 'main.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<main class="main-aboutpage">
+    {% include 'header.html' %}
+
+    <!-- Contact -->
+    <section class="contact-area">
+        <div class="container">
+            <div class="gx-row d-flex justify-content-between gap-24">
+                <div class="contact-infos">
+                    <h3 data-aos="fade-up">Contact Info</h3>
+                    <ul class="contact-details">
+                        <li class="d-flex align-items-center" data-aos="zoom-in">
+                            <div class="icon-box shadow-box">
+                                <i class="iconoir-mail"></i>
+                            </div>
+                            <div class="right">
+                                <span>Mail me</span>
+                                <h4>espinosajfer@gmail.com</h4>
+                            </div>
+                        </li>
+
+                        <li class="d-flex align-items-center" data-aos="zoom-in">
+                            <div class="icon-box shadow-box">
+                                <i class="iconoir-pin"></i>
+                            </div>
+                            <div class="right">
+                                <span>Location</span>
+                                <h4>Munich</h4><br><h4>Germany</h4>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <h3 data-aos="fade-up">Social Info</h3>
+                    <ul class="social-links d-flex align-center" data-aos="zoom-in">
+                        <li><a class="shadow-box" href="https://www.instagram.com/juanfernandoer/" target="_blank"><i class="iconoir-instagram"></i></a></li>
+                        <li><a class="shadow-box" href="https://www.linkedin.com/in/juanferespinosa" target="_blank"><i class="iconoir-linkedin"></i></a></li>
+                    </ul>
+                </div>
+
+                <!--<div data-aos="zoom-in" class="contact-form">
+                    <div class="shadow-box">
+                        <img src="./assets/images/bg1.png" alt="BG" class="bg-img">
+                        
+                        <h1>Get in <span>touch.</span></h1>
+
+                        <form method="POST" action="">
+                            {% csrf_token %}
+                            <div class="alert alert-success messenger-box-contact__msg" style="display: none" role="alert">
+                                Your message was sent successfully.
+                            </div>
+                            <div class="input-group">
+                                <input type="text" name="name" id="full-name" placeholder="Name *" >
+                            </div>
+                            <div class="input-group">
+                                <input type="email" name="email" id="email" placeholder="Email *" >
+                            </div>
+                            <div class="input-group">
+                                <input type="text" name="subject" id="subject" placeholder="Your Subject *">
+                            </div>
+                            <div class="input-group">
+                                <textarea name="message" id="message" placeholder="Your Message *"></textarea>
+                            </div>
+                            <div class="input-group">
+                                <button class="theme-btn submit-btn" name="submit" type="submit">Send message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>-->
+                
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    {% include 'footer.html' %}
+    
+
+</main>
+    
+
+{% endblock content %}

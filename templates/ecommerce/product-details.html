@@ -1,0 +1,136 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+<main class="main-workdetails-page">
+
+    <!-- Header -->
+    {% include 'header.html' %}
+    
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb-area">
+        <div class="container">
+            <div class="breadcrumb-content" data-aos="fade-up">
+                <p>HOME - T shirts - Red Shirt</p>
+                <h1 class="section-heading"> Red Shirt </h1>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Blog Details -->
+    <section class="blog-details-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="blog-details-content">
+                        <div class="img-box">
+                            <img src="{% static 'images/blog/ecommerce/product1.png' %}" alt="Red shirt">
+                        </div>
+                        <h1 >It is your chance to stand out.</h1>
+                        <p>Clothes are not just wearables but impressions. Make it last with the new, elastic, waterproof, and no wrinkle shirt.</p>
+                        <p>You love sports, sure! You are a creative, okay, You are a problem-solver, Boom! why overthink on a no brainer call.</p>
+                        
+
+                        <ul class="list">
+                            <li>- No wrinkles</li>
+                            <li>- Waterproof.</li>
+                            <li>- Size</li>
+
+
+                        <div class="comments-and-form-wrap">
+                            <div class="comments-and-form-wrap-inner shadow-box">
+                                <h2>2 Reviews</h2>
+
+                                <div class="comments">
+
+                                    <div class="comment-list">
+                                        <div class="comment-avatar">
+                                            <img src="{% static 'images/user-default.png' %}" alt="Avatar">
+                                        </div>
+                                        <div class="comment-body">
+                                            <span class="date">25 March 2024</span>
+                                            <h3>Jonathan Doe</h3>
+                                            <p>Best purchase ever.</p>
+                                            <a href="#" class="reply-btn theme-btn">Reply</a>
+                                        </div>
+                                    </div>
+
+                                    
+                                    <div class="comment-list">
+                                        <div class="comment-avatar">
+                                            <img src="{% static 'images/user-default.png' %}" alt="Avatar">
+                                        </div>
+                                        <div class="comment-body">
+                                            <span class="date">25 March 2022</span>
+                                            <h3>Marie Doe</h3>
+                                            <p>Happy with my purchase. I like the texture and how it feels however I cannot answer yet in terms of durability.</p>
+                                            <a href="#" class="reply-btn theme-btn">Reply</a>
+                                        </div>
+                                    </div>
+                                    
+
+                                </div>
+
+                                <div class="comment-form">
+                                    <h2>Leave a review</h2>
+
+                                    <form>
+                                        <div class="input-group">
+                                            <input type="text" name="name" placeholder="Name*">
+                                        </div>
+                                        <div class="input-group">
+                                            <input type="text" name="email" placeholder="Email*">
+                                        </div>
+                                        <div class="input-group">
+                                            <textarea name="message" placeholder="Your Message*"></textarea>
+                                        </div>
+                                        <div class="input-group">
+                                            <button class="theme-btn" type="submit">Send Review</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="blog-sidebar">
+                        <div class="blog-sidebar-inner">
+
+                            <div class="blog-sidebar-widget tags-widget" data-aos="zoom-in">
+                                <div class="blog-sidebar-widget-inner shadow-box">
+                                    <h3>Sizes</h3>
+
+                                    <ul>
+                                        <li><a class="theme-btn">S</a></li>
+                                        <li><a class="theme-btn">M</a></li>
+                                        <li><a class="theme-btn">L</a></li>
+                                        <li><a class="theme-btn">XL</a></li>
+                                    </ul>
+                                    <br>
+                                    <br>
+                                    <h3 style="color:white; opacity: 0.8;">Price: $ 7.99</h3>
+                                    <a href="./contact.html" class="theme-btn white" style="background-color: white;color:#898989;">Add to cart</a>
+
+                                </div>
+                            </div>
+
+                            
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% include 'footer.html' %}
+
+
+</main>
+    
+
+{% endblock content %}

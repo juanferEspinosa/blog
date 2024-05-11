@@ -1,0 +1,116 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block title %}Data Analytics Projects{% endblock %}
+{% block meta%}
+    <meta name="description" content="Description to be defined for the website."/>
+    <meta property="og:locale" content="en_DE"/>
+    <meta property="og:site_name" content="Juanfer Espinosa"/>
+    <meta property="og:title" content="Data Analytics Projects | Juanfer Espinosa"/>
+    <meta property="og:description" content="Description to be defined for the website.."/>
+    <meta property="og:type" content="website"/>
+{% endblock %}
+
+{% block content %}
+
+
+
+<main class="main-aboutpage">
+
+    {% include 'header.html' %}
+    
+    <!-- Credentials -->
+    <section class="credential-area">
+        <div class="container">
+            <div class="gx-row d-flex">
+                <div class="credential-sidebar-wrap" data-aos="zoom-in">
+                    <div class="credential-sidebar text-center">
+                        <div class="shadow-box">
+                            <img src="{% static '/images/bg1.png' %}" alt="BG" class="bg-img">
+                            <div class="img-box">
+                                <img src="{% static 'images/juanfer_espinosa2.png' %}" alt="About Me">
+                            </div>
+                            <h2>Juanfer Espinosa</h2>
+                            <!--<p>@davidhenderson</p>-->
+    
+                            <ul class="social-links d-flex justify-content-center">
+                                <!--<li><a href="#"><i class="iconoir-dribbble"></i></a></li>-->
+                                <!--<li><a href="#"><i class="iconoir-twitter"></i></a></li>-->
+                                <!--<li><a href="https://www.instagram.com/juanfernandoer/" target="_blank"><i class="iconoir-instagram"></i></a></li>-->
+                                <li><a href="https://www.linkedin.com/in/juanferespinosa" target="_blank"><i class="iconoir-linkedin"></i></a></li>
+                                <li><a href="https://github.com/juanferEspinosa" target="_blank"><i class="iconoir-github"></i></a></li>
+                                <li><a href="mailto:espinosajfer@gmail.com"><i class="iconoir-mail"></i></a></li>
+                            </ul>
+    
+                            <!--<a href="mailto:espinosajfer@gmail.com" class="theme-btn">Contact Me</a>-->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="credential-content flex-1">
+                    <div class="credential-about" data-aos="zoom-in">
+                        <h2>Hey hey</h2>
+                        <div class="credential-edc-exp credential-experience">
+                            <div class="credential-edc-exp-item" data-aos="zoom-in">
+                                <h3>I am Juanfer Espinosa</h3>
+                                <br>
+                                
+                                <p>I am from Loja, a beautiful city located in the south of Ecuador. I have background in data science, data analytics, and digital marketing. I have programming experience in Python, django with additional knowledge in HTML and CSS.</p>
+                                <br>    
+                                <p>Back in 2015 when I was working as a <strong>data analyst in marketing</strong>, I had the opportunity to code a simple landing page. It was my first hands-on in programming and since then I have not stopped. </p>
+                                <br>    
+                                <p>The purpose of this blog is to answer questions that comes to my mind, serve as a personal knowledge base, and be a place where to go in need for inspiration.</p>
+
+                            </div>
+                        </div>
+                    </div>                    
+                    
+                </div>
+            </div>
+            
+        
+
+        </div>
+    </section>
+    <section class="projects-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="section-heading" data-aos="fade-up", style="text-align:left;  font-size: 35px;"> Posts </h2>
+                    <br>
+                    <div class="d-flex align-items-start gap-24">
+                        <div data-aos="zoom-in" class="flex-1">
+                            {% for post in posts %}
+                            <div class="project-item shadow-box">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div class="project-info">
+                                        <p>post.category</p>
+                                        <h1>{{post.title}}</h1>
+                                    </div>
+                                    <a href="{% url 'detail_post' post.slug %}" class="project-btn">
+                                        <img src="{% static 'images/dot-arrow-right.svg' %}" alt="Button">
+                                    </a>
+                                </div>
+                            </div>
+                            {% endfor %}
+                            
+                        </div>
+                    </div>
+                    
+                    
+                    
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+    
+    
+
+    <!-- Footer -->
+    {% include 'footer.html' %}
+
+</main>
+
+{% endblock content %}
+
