@@ -38,7 +38,7 @@ else:
     DEBUG = False
 
 
-ALLOWED_HOSTS = ['localhost', 'juanferespinosa.up.railway.app']
+ALLOWED_HOSTS = ['localhost','127.0.0.1:8000', 'juanferespinosa.up.railway.app']
 
 CSRF_TRUSTED_ORIGIN = ['https://juanferespinosa.up.railway.app']
 
