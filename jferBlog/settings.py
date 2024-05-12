@@ -38,7 +38,9 @@ else:
     DEBUG = False
 
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['localhost', 'juanferespinosa.up.railway.app']
+
+CSRF_TRUSTED_ORIGIN = ['https://juanferespinosa.up.railway.app']
 
 
 # Application definition
