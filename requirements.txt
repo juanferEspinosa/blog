@@ -20,8 +20,6 @@ dj3-cloudinary-storage==0.0.6
 Django==3.2.25
 django-environ==0.10.0
 django-psycopg2-extension==0.1.1
-djangorestframework==3.14.0
-djangorestframework-simplejwt==5.2.2
 et-xmlfile==1.1.0
 filelock==3.13.4
 gunicorn==20.1.0
@@ -37,7 +35,7 @@ openpyxl==3.0.9
 pgsql==2.2
 phonenumbers==8.12.31
 phonenumberslite==8.12.31
-Pillow==8.2.0
+pillow==10.3.0
 platformdirs==4.2.0
 postgres==4.0
 psycopg2==2.9.6
