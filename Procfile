@@ -1,2 +1,1 @@
-web: python manage.py migrate && gunicorn DeveloperSearch.wsgi
-
+web: python manage.py migrate && gunicorn jferBlog.wsgi
