@@ -25,7 +25,6 @@ sitemaps = {
     "static": StaticViewSitemap,}
 
 urlpatterns = [
-    path('admin/', include('admin_honeypot.urls', namespace='admin_honeypot')),
     path('management/', admin.site.urls),
     path('blog/', include('blog.urls')),
     path('', include('homepage.urls')),

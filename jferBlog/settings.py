@@ -56,7 +56,6 @@ INSTALLED_APPS = [
     'homepage.apps.HomepageConfig',
     'blog.apps.BlogConfig',
     'django.contrib.sitemaps',
-    'admin_honeypot',
 ]
 
 MIDDLEWARE = [
@@ -164,4 +163,3 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-ACCOUNT_USERNAME_BLACKLIST = ['management', 'admin', 'account', 'profile', 'Post']
