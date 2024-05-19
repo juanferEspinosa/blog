@@ -25,7 +25,7 @@ sitemaps = {
     "static": StaticViewSitemap,}
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('management/', admin.site.urls),
     path('blog/', include('blog.urls')),
     path('', include('homepage.urls')),
     path("robots.txt", TemplateView.as_view(template_name="robots.txt", content_type="text/plain")),
