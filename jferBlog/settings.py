@@ -26,7 +26,8 @@ PROJECT_ROOT = os.path.dirname(__file__)
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
+# SECURITY WARN
+# ¡ING: keep the secret key used in production secret!
 ENVIRONMENT = env('ENVIRONMENT', default='production')
 SECRET_KEY = env('SECRETKEY')
 
@@ -38,9 +39,9 @@ else:
     DEBUG = False
 
 
-ALLOWED_HOSTS = ['localhost','127.0.0.1:8000', 'juanferespinosa.up.railway.app', 'juanferespinosa.com']
+ALLOWED_HOSTS = ['127.0.0.1:8000','localhost', 'juanferespinosa.up.railway.app', 'juanferespinosa.com']
 
-CSRF_TRUSTED_ORIGIN = ['https://juanferespinosa.up.railway.app']
+CSRF_TRUSTED_ORIGIN = ['https://juanferespinosa.up.railway.app', ]
 
 
 # Application definition
@@ -57,6 +58,7 @@ INSTALLED_APPS = [
     'homepage.apps.HomepageConfig',
     'blog.apps.BlogConfig',
     'django.contrib.sitemaps',
+
 ]
 
 MIDDLEWARE = [
