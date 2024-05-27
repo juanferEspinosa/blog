@@ -38,6 +38,28 @@
     }
     });
 </script>
+<script>
+    function clickElement() {  
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ ecommerce: null });
+        window.dataLayer.push({
+        event: 'select_item',             // name of the event.
+        ecommerce: {                          
+            items: [{                           // Open array where all included products are viewed.
+            item_name: 'Red Shirt',           // Product name
+            item_id: 'shirt001',              // Product ID
+            price: '7.99',                    // It can be both a number or string 
+            item_brand: 'mock-up',            // insert an actual product price
+            item_category: 'Clothes',         // Category 1 name
+            item_category2: 'T-shirt',        // Category 2 name. You can have up to 5 categories
+            item_variant: '',                 // You can add variants such as different product color. 
+            index: 1,                         // It must be equal to 1
+            quantity: '1'                     // Quantity must be equal to 1. 
+            }]
+        }
+        })};
+
+</script>
 {% endblock %}
 
 {% block content %}
@@ -111,25 +133,25 @@
     </section>
     {% block datalayerFunction  %}
     <script>
-        window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({ ecommerce: null });
-    function clickElement() {  
-        window.dataLayer.push({
-        event: 'select_item',             // name of the event.
-        ecommerce: {                          
-            items: [{                           // Open array where all included products are viewed.
-            item_name: 'Red Shirt',           // Product name
-            item_id: 'shirt001',              // Product ID
-            price: '7.99',                    // It can be both a number or string 
-            item_brand: 'mock-up',            // insert an actual product price
-            item_category: 'Clothes',         // Category 1 name
-            item_category2: 'T-shirt',        // Category 2 name. You can have up to 5 categories
-            item_variant: '',                 // You can add variants such as different product color. 
-            index: 1,                         // It must be equal to 1
-            quantity: '1'                     // Quantity must be equal to 1. 
-            }]
-        }
-        })};
+        function clickElement() {  
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({ ecommerce: null });
+            window.dataLayer.push({
+            event: 'select_item',             // name of the event.
+            ecommerce: {                          
+                items: [{                           // Open array where all included products are viewed.
+                item_name: 'Red Shirt',           // Product name
+                item_id: 'shirt001',              // Product ID
+                price: '7.99',                    // It can be both a number or string 
+                item_brand: 'mock-up',            // insert an actual product price
+                item_category: 'Clothes',         // Category 1 name
+                item_category2: 'T-shirt',        // Category 2 name. You can have up to 5 categories
+                item_variant: '',                 // You can add variants such as different product color. 
+                index: 1,                         // It must be equal to 1
+                quantity: '1'                     // Quantity must be equal to 1. 
+                }]
+            }
+            })};
     
     </script>
     {% endblock %}
