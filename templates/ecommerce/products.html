@@ -146,7 +146,7 @@
 </script>-->
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-      document.getElementById('myEnhancedLink').addEventListener('click', function(event) {
+      document.getElementById('selectItem').addEventListener('click', function() {
         // Push data to the dataLayer with additional information
         window.dataLayer.push({
         event: 'select_item',             // name of the event.
@@ -166,12 +166,10 @@
         });
 
         // Delay the navigation to ensure dataLayer push completes
-        setTimeout(function() {
-          window.location.href = event.target.href;
-        }, 200);
+        
 
         // Prevent the default action to control the navigation
-        event.preventDefault();
+       
       });
     });
   </script>
