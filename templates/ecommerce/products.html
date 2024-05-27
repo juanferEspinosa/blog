@@ -39,7 +39,7 @@
     });
 </script>
 <script>
-    function clickElement() {  
+    document.getElementById('selectItem').addEventListener('click', function(event) {
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({ ecommerce: null });
         window.dataLayer.push({
@@ -58,6 +58,10 @@
             }]
         }
         });
+        setTimeout(function() {
+            window.location.href = event.target.href;
+        }, 200);
+        event.preventDefault();
         }
 </script>
 {% endblock %}
@@ -94,7 +98,7 @@
                                         <h1>Red Shirt</h1>
                                         <p style="font-size:20px;color:#fff;">$7.99</p>
                                     </div>
-                                    <a onClick ='clickElement()' href="{% url 'ecommerce_product_detail' %}" class="project-btn">
+                                    <a id="selectItem" href="{% url 'ecommerce_product_detail' %}" class="project-btn">
                                         <img src="{% static 'images/dot-arrow-right.svg' %}" alt="Button">
                                     </a>
                                 </div>
