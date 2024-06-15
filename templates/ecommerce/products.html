@@ -145,7 +145,7 @@
         });
 </script>-->
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    
       document.getElementById('selectItem').addEventListener('click', function() {
         // Push data to the dataLayer with additional information
         window.dataLayer.push({
@@ -158,7 +158,6 @@
             item_brand: 'mock-up',            // insert an actual product price
             item_category: 'Clothes',         // Category 1 name
             item_category2: 'T-shirt',        // Category 2 name. You can have up to 5 categories
-            item_variant: '',                 // You can add variants such as different product color. 
             index: 1,                         // It must be equal to 1
             quantity: '1'                     // Quantity must be equal to 1. 
             }]
@@ -171,8 +170,8 @@
         // Prevent the default action to control the navigation
        
       });
-    });
-  </script>
+
+</script>
 {% endblock %}
 
 {% endblock content %}
