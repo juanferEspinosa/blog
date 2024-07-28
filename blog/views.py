@@ -18,7 +18,7 @@ def ecommerce_products(request):
 def ecommerce_product_detail(request):
     return render(request, 'ecommerce/product-details.html')
 
-
+"""
 def llmChatbot(request):
     if request.method == 'POST':
         query = request.POST.get('query')
@@ -39,5 +39,5 @@ def buildDB(request):
     # build the database asynchronously
     thread = threading.Thread(target=build_database)
     thread.start()
-    return JsonResponse({'status': 'Building database'})
+    return JsonResponse({'status': 'Building database'})"""
 
