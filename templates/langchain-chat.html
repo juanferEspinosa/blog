@@ -1,0 +1,75 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block title %}{{detail_post.title}}{% endblock %}
+{% block meta%}
+    <meta name="description" content="{{detail_post.intro}}"/>
+    <meta property="og:title" content="{{detail_post.title}} | Juanfer Espinosa"/>
+    <meta property="og:description" content="Description to be defined for the website.."/>
+    <meta property="og:locale" content="en_DE"/>
+    <meta property="og:site_name" content="Juanfer Espinosa"/>
+    <meta property="og:image" content="https://juanferespinosa.com{{detail_post.image.url}}">
+    <meta property="og:image:width" content="1800">
+    <meta property="og:image:height" content="600">
+    <meta property="og:url" content="https://juanferespinosa.com/{{detail_post.slug}}">
+    <meta property="og:type" content="website"/>
+{% endblock %}
+
+
+
+
+{% block content %}
+
+<main class="main-workdetails-page">
+    {% include 'header.html' %}
+
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb-area">
+        <div class="container">
+            <div class="breadcrumb-content" data-aos="fade-up">
+                <p>HOME - BLOG DETAILS</p>
+                <h1 class="section-heading">{{detail_post.title}}</h1>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Blog Details -->
+    <section class="blog-details-area">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-md-12">
+                    <div class="blog-details-content">
+                        <div class="img-box">
+                            <img src="{{detail_post.image.url}}" alt="Blog">
+                        </div> 
+                        <span class="meta">{{detail_post.category}}</span>
+                        
+                        <p>{{detail_post.body|safe}}</p>
+                        
+
+                        
+                        
+                        <!--<div class="tags">
+                            <a href="#" class="theme-btn">SASS</a>
+                            <a href="#" class="theme-btn">Development</a>
+                        </div>-->
+
+                        
+
+                    </div>
+                </div>
+               
+                
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    {% include 'footer.html' %}
+
+</main>
+{% endblock content %}
