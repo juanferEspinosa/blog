@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from .models import Post
 from django.http import JsonResponse, HttpResponse
-import threading
-from .llm_logic import build_database, answer_query, database_exists
+#import threading
+#from .llm_logic import build_database, answer_query, database_exists
 
 
 

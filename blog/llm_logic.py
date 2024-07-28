@@ -1,4 +1,4 @@
-from django.shortcuts import render
+"""from django.shortcuts import render
 from bs4 import BeautifulSoup
 from dotenv import load_dotenv
 from pathlib import Path
@@ -89,4 +89,4 @@ def answer_query(query):
 
     )
     result = chain({"question":query}, return_only_outputs=True)
-    return result
+    return result"""
