@@ -1,4 +1,4 @@
-"""from django.shortcuts import render
+from django.shortcuts import render
 from bs4 import BeautifulSoup
 from dotenv import load_dotenv
 from pathlib import Path
@@ -19,12 +19,13 @@ SCRAPER_LINK_LIMIT = 100
 
 
 def docs_builder():
-    root_url = 'https://www.analyticsmania.com/post/google-analytics-4-best-practices/'
+    root_url = 'https://getbootstrap.com/docs/5.3/getting-started/contents/'
     root_response = requests.get(root_url)
     root_html = root_response.content.decode("utf-8")
     soup = BeautifulSoup(root_html, 'html.parser')
     root_url_parts = urlparse(root_url)
-    root_links = soup.find_all("a", attrs={"id":"content"})
+    root_links = soup.find_all(
+        "a", attrs={"class": "bd-links-link d-inline-block rounded"})
     result = set()
     for root_link in root_links:
         path = root_link.get('href')
@@ -89,4 +90,4 @@ def answer_query(query):
 
     )
     result = chain({"question":query}, return_only_outputs=True)
-    return result"""
+    return result
