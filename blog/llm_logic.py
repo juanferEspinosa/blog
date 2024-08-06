@@ -27,9 +27,13 @@ def docs_builder():
     root_links = soup.find_all(
         "a", attrs={"class": "bd-links-link d-inline-block rounded"})
     result = set()
+    counter = 0
     for root_link in root_links:
+        if counter >= SCRAPER_LINK_LIMIT:
+            break
         path = root_link.get('href')
         path = str(Path(path).resolve())
+        path = urlparse(path).path
         url = f"{root_url_parts.scheme}://{root_url_parts.netloc}{path}"
         if not url.endswidth("/"):
             url = url + "/"
