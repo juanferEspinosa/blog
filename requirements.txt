@@ -41,7 +41,6 @@ django-psycopg2-extension==0.1.1
 dnspython==2.6.1
 email_validator==2.2.0
 et-xmlfile==1.1.0
-fastapi==0.111.1
 fastapi-cli==0.0.4
 filelock==3.13.4
 flatbuffers==24.3.25
@@ -159,7 +158,7 @@ tqdm==4.66.4
 Twisted==21.7.0
 txaio==21.2.1
 typer==0.12.3
-typing-extensions==4.5.0
+typing-extensions==4.12
 typing-inspect==0.9.0
 urllib3==1.26.11
 uvicorn==0.30.1
