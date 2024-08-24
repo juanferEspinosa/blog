@@ -29,7 +29,8 @@
             <div class="breadcrumb-content" data-aos="fade-up">
                 
                 <h1 class="section-heading">{{detail_post.title}}</h1>
-                <p>Date: {{detail_post.created}}</p>
+                <p>Date: {{detail_post.created}} | Author: Juanfer Espinosa</p>
+                <span class="meta">Category: {{detail_post.category}}</span>
             </div>
         </div>
     </section>
@@ -46,7 +47,7 @@
                             <img src="{{detail_post.image.url}}" alt="Blog">
                             <p>Figure - {{detail_post.image.url}}</p>
                         </div> 
-                        <span class="meta">{{detail_post.category}}</span>
+                        
                         
                         <p>{{detail_post.body|safe}}</p>
                         
