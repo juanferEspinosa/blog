@@ -30,7 +30,7 @@
                 
                 <h1 class="section-heading">{{detail_post.title}}</h1>
                 <p>Date: {{detail_post.created}} | Author: Juanfer Espinosa</p>
-                <span class="meta">Category: {{detail_post.category}}</span>
+                
             </div>
         </div>
     </section>
@@ -43,6 +43,7 @@
                 
                 <div class="col-md-12">
                     <div class="blog-details-content">
+                        <span class="meta">Category: {{detail_post.category}}</span>
                         <div class="img-box">
                             <img src="{{detail_post.image.url}}" alt="Blog">
                             <p>Figure - {{detail_post.image.name}}</p>
