@@ -27,8 +27,9 @@
     <section class="breadcrumb-area">
         <div class="container">
             <div class="breadcrumb-content" data-aos="fade-up">
-                <p>HOME - BLOG DETAILS</p>
+                
                 <h1 class="section-heading">{{detail_post.title}}</h1>
+                <p>Date: {{detail_post.created}}</p>
             </div>
         </div>
     </section>
@@ -43,6 +44,7 @@
                     <div class="blog-details-content">
                         <div class="img-box">
                             <img src="{{detail_post.image.url}}" alt="Blog">
+                            <p>Figure - {{detail_post.image.url}}</p>
                         </div> 
                         <span class="meta">{{detail_post.category}}</span>
                         
