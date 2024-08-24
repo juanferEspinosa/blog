@@ -72,7 +72,7 @@ def build_database():
     )
     # DB persist save the data into the database making it available for future use.
     db.persist()
-    print(f"Saved {len(splits)} chunks to {CHROMA_PATH}.")
+    print(f"Saved {len(splits)} chunks to {CHROMA_DB_DIRECTORY}.")
 
 
 def answer_query(query):

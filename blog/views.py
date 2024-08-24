@@ -23,8 +23,8 @@ def ecommerce_product_detail(request):
 def llmChatbot(request):
     if request.method == 'POST':
         query = request.POST.get('query')
-        result = answer_query(query)  # Here we are getting the results of the embeddings
-         # Here, we will create a database if we don't have one as the user loads onto the page
+        result = answer_query(query)  # Embeddings
+         
          
         return JsonResponse(result)
     return render(request, 'langchain-chat.html')
