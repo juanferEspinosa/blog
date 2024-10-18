@@ -13,15 +13,7 @@ class Post(models.Model):
     body = models.TextField()
     created = models.DateTimeField(auto_now_add=True)
     id = models.UUIDField(default=uuid.uuid4, unique=True, primary_key=True, editable=False)
-<<<<<<< HEAD
-<<<<<<< HEAD
-    tags = models.ManyToManyField('Tag', blank=True)
-=======
-    #tags = models.CharField(max_length=400, null=True, blank=True)
->>>>>>> parent of 9cecc4b (Update models.py)
-=======
-    tags = models.CharField(max_length=400, null=True, blank=True)
->>>>>>> parent of 9335086 (Revert "Erase Tag model and add tag field")
+
 
     class Meta:
         ordering = ['-created']
