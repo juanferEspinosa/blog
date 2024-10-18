@@ -1,13 +1,7 @@
 from django.db import models
 import uuid
 
-class Tag(models.Model):
-    name = models.CharField(max_length=200)
-    created = models.DateTimeField(auto_now_add=True)
-    id = models.UUIDField(default=uuid.uuid4, unique=True, primary_key=True, editable=False)
 
-    def __str__(self):
-        return self.name
 
 
 class Post(models.Model):
@@ -20,10 +14,14 @@ class Post(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     id = models.UUIDField(default=uuid.uuid4, unique=True, primary_key=True, editable=False)
 <<<<<<< HEAD
+<<<<<<< HEAD
     tags = models.ManyToManyField('Tag', blank=True)
 =======
     #tags = models.CharField(max_length=400, null=True, blank=True)
 >>>>>>> parent of 9cecc4b (Update models.py)
+=======
+    tags = models.CharField(max_length=400, null=True, blank=True)
+>>>>>>> parent of 9335086 (Revert "Erase Tag model and add tag field")
 
     class Meta:
         ordering = ['-created']
