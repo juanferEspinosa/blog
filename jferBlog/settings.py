@@ -103,7 +103,7 @@ WSGI_APPLICATION = 'jferBlog.wsgi.application'
     }
 }"""
 
-DATABASES = {
+"""DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': env('PGDATABASE'),
@@ -112,11 +112,11 @@ DATABASES = {
         'HOST': env('PGHOST'),
         'PORT': env('PGPORT')
     }
-}
+}"""
 
-"""POSTGRESS_LOCALLY = True
+POSTGRESS_LOCALLY = True
 if ENVIRONMENT == 'production' or POSTGRESS_LOCALLY == True:
-    DATABASES['default'] = dj_database_url.parse(env('DATABASE_PRIVATE_URL'))"""
+    DATABASES['default'] = dj_database_url.parse(env('DATABASE_PRIVATE_URL'))
 
 
 
