@@ -13,6 +13,7 @@ class Post(models.Model):
     body = models.TextField()
     created = models.DateTimeField(auto_now_add=True)
     id = models.UUIDField(default=uuid.uuid4, unique=True, primary_key=True, editable=False)
+    Tag = models.ManyToManyField('Tag', blank=True)
     
 
 
@@ -25,3 +26,11 @@ class Post(models.Model):
     def get_absolute_url(self):
         return self.slug
     
+
+class Tag(models.Model):
+    tag = models.CharField(max_length=255)
+    created = models.DateTimeField(auto_now_add=True)
+    id = models.UUIDField(default=uuid.uuid4, unique=True, primary_key=True, editable=False)
+
+    def __str__(self):
+        return self.name
