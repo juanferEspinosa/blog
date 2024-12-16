@@ -121,7 +121,7 @@ DATABASES = {
 }
 DATABASE_URL = env("DATABASE_PRIVATE_URL")
 
-"""DATABASES = {
+DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': env('DB_NAME'),
@@ -130,7 +130,7 @@ DATABASE_URL = env("DATABASE_PRIVATE_URL")
         'HOST': env('DB_HOST'),
         'PORT': env('DB_PORT'),
     }
-}"""
+}
 
 """POSTGRESS_LOCALLY = True
 if ENVIRONMENT == 'production' or POSTGRESS_LOCALLY == True:
