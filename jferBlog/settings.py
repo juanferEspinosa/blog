@@ -96,15 +96,27 @@ WSGI_APPLICATION = 'jferBlog.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
+"""DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
+}"""
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': env('PGDATABASE'),
+        'USER': env('PGUSER'),
+        'PASSWORD': env('PGPASSWORD'),
+        'HOST': env('PGHOST'),
+        'PORT': env('PGPORT')
+    }
 }
-POSTGRESS_LOCALLY = True
+
+"""POSTGRESS_LOCALLY = True
 if ENVIRONMENT == 'production' or POSTGRESS_LOCALLY == True:
-    DATABASES['default'] = dj_database_url.parse(env('DATABASE_PRIVATE_URL'))
+    DATABASES['default'] = dj_database_url.parse(env('DATABASE_PRIVATE_URL'))"""
 
 
 
