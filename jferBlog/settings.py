@@ -41,7 +41,6 @@ else:
 
 ALLOWED_HOSTS = ['127.0.0.1:8000','localhost', 'juanferespinosa.up.railway.app', 'juanferespinosa.com']
 
-#CSRF_TRUSTED_ORIGIN = ['https://juanferespinosa.up.railway.app', ]
 
 
 # Application definition
@@ -96,14 +95,14 @@ WSGI_APPLICATION = 'jferBlog.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
+"""DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
-"""DATABASES = {
+DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': env('PGDATABASE'),
@@ -114,9 +113,30 @@ DATABASES = {
     }
 }"""
 
-POSTGRESS_LOCALLY = True
+"""DATABASES = {
+   'default': {
+       'ENGINE': 'django.db.backends.postgresql',
+       'NAME': dj_database_url.config(default=env('DATABASE_URL'),conn_max_age=1800),
+   }
+}"""
+DATABASE_URL = env("DATABASE_PRIVATE_URL")
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': env('DB_NAME'),
+        'USER': env('DB_USER'),
+        'PASSWORD': env('DB_PASSWORD'),
+        'HOST': env('DB_HOST'),
+        'PORT': env('DB_PORT'),
+    }
+}
+
+"""POSTGRESS_LOCALLY = True
 if ENVIRONMENT == 'production' or POSTGRESS_LOCALLY == True:
     DATABASES['default'] = dj_database_url.parse(env('DATABASE_URL'))
+"""
+ 
 
 
 
