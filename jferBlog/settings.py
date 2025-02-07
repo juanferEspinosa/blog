@@ -39,7 +39,7 @@ else:
     DEBUG = False
 
 
-ALLOWED_HOSTS = ['127.0.0.1:8000','localhost', 'juanferespinosa.up.railway.app', 'juanferespinosa.com']
+ALLOWED_HOSTS = ['127.0.0.1:8000','localhost', 'juanferespinosa.up.railway.app', 'juanferespinosa.com','*']
 
 
 
@@ -100,25 +100,9 @@ WSGI_APPLICATION = 'jferBlog.wsgi.application'
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
-}
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': env('PGDATABASE'),
-        'USER': env('PGUSER'),
-        'PASSWORD': env('PGPASSWORD'),
-        'HOST': env('PGHOST'),
-        'PORT': env('PGPORT')
-    }
 }"""
 
-DATABASES = {
-   'default': {
-       'ENGINE': 'django.db.backends.postgresql_psycopg2',
-       'NAME': dj_database_url.config(default=env('DATABASE_URL'),conn_max_age=1800),
-   }
-}
+
 DATABASE_URL = env("DATABASE_PRIVATE_URL")
 
 DATABASES = {
