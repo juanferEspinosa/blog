@@ -39,7 +39,7 @@ else:
     DEBUG = False
 
 
-ALLOWED_HOSTS = ['127.0.0.1:8000','localhost', 'juanferespinosa.up.railway.app', 'juanferespinosa.com','*']
+ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default=["*"])
 
 
 
@@ -116,9 +116,9 @@ DATABASES = {
     }
 }
 
-POSTGRESS_LOCALLY = True
+"""POSTGRESS_LOCALLY = True
 if ENVIRONMENT == 'production' or POSTGRESS_LOCALLY == True:
-    DATABASES['default'] = dj_database_url.parse(env('DATABASE_URL'))
+    DATABASES['default'] = dj_database_url.parse(env('DATABASE_URL'))"""
 
  
 
