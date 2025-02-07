@@ -115,7 +115,7 @@ DATABASES = {
 
 DATABASES = {
    'default': {
-       'ENGINE': 'django.db.backends.postgresql',
+       'ENGINE': 'django.db.backends.postgresql_psycopg2',
        'NAME': dj_database_url.config(default=env('DATABASE_URL'),conn_max_age=1800),
    }
 }
