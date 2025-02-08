@@ -41,7 +41,6 @@ openpyxl==3.0.9
 packaging==24.2
 phonenumbers==8.12.31
 phonenumberslite==8.12.31
-Pillow==8.2.0
 psycopg2==2.9.6
 psycopg2-binary==2.9.6
 pyasn1==0.4.8
