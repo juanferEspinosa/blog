@@ -103,7 +103,7 @@ WSGI_APPLICATION = 'jferBlog.wsgi.application'
 }"""
 
 
-DATABASE_URL = env("DATABASE_URL")
+#DATABASE_URL = env("DATABASE_URL")
 
 DATABASES = {
     'default': {
@@ -115,6 +115,8 @@ DATABASES = {
         'PORT': env('DB_PORT'),
     }
 }
+
+
 
 POSTGRESS_LOCALLY = True
 if ENVIRONMENT == 'production' or POSTGRESS_LOCALLY == True:
