@@ -39,7 +39,7 @@ else:
     DEBUG = False
 
 
-ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default=["*"])
+ALLOWED_HOSTS = env.list('ALLOWED_HOSTS')
 
 
 
@@ -103,7 +103,7 @@ WSGI_APPLICATION = 'jferBlog.wsgi.application'
 }"""
 
 
-DATABASE_URL = env("DATABASE_PRIVATE_URL")
+DATABASE_URL = env("DATABASE_URL")
 
 DATABASES = {
     'default': {
@@ -116,9 +116,9 @@ DATABASES = {
     }
 }
 
-"""POSTGRESS_LOCALLY = True
+POSTGRESS_LOCALLY = True
 if ENVIRONMENT == 'production' or POSTGRESS_LOCALLY == True:
-    DATABASES['default'] = dj_database_url.parse(env('DATABASE_URL'))"""
+    DATABASES['default'] = dj_database_url.parse(env('DATABASE_URL'))
 
  
 
