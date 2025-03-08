@@ -15,6 +15,10 @@ import os
 import sys
 import dj_database_url
 from environ import Env
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+
 env = Env()
 Env.read_env()
 
@@ -39,7 +43,7 @@ else:
     DEBUG = False
 
 
-ALLOWED_HOSTS = env.list('ALLOWED_HOSTS')
+ALLOWED_HOSTS = ["*"]
 
 
 
@@ -51,6 +55,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
     'whitenoise.runserver_nostatic',
@@ -95,13 +100,13 @@ WSGI_APPLICATION = 'jferBlog.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 
 
 POSTGRESS_LOCALLY = True
@@ -153,7 +158,6 @@ CLOUDINARY_STORAGE = {
     'API_KEY': env('CL_API_KEY'),
     'API_SECRET': env('CL_API_SECRET'),
 }
-
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/images/'
