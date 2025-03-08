@@ -62,7 +62,7 @@ pandas==2.2.2
 parso==0.8.4
 patsy==0.5.6
 pexpect==4.9.0
-pgsql==2.1
+pgsql==1.2
 phonenumbers==8.12.31
 phonenumberslite==8.12.31
 pickleshare==0.7.5
